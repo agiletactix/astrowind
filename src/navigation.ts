@@ -33,7 +33,7 @@ export const headerData = {
 export const footerData = {
   links: [
    
-      title: 'Platform',
+    { title: 'Platform',
       links: [
         { text: 'Developer API', href: '#' },
         { text: 'Partners', href: '#' },
