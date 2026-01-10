@@ -1,9 +1,27 @@
 ---
-import { SITE } from 'astrowind:config';
+import { Image } from 'astro:assets';
+// @ts-ignore
+import logoLight from '~/assets/images/agiletactix-logo-light.png';
+// @ts-ignore
+import logoDark from '~/assets/images/agiletactix-logo-dark.png';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+<!-- Light mode logo (dark text) -->
+<Image
+  src={logoLight}
+  alt="AgileTactix"
+  width={200}
+  height={50}
+  class="h-10 w-auto dark:hidden"
+  loading="eager"
+/>
+
+<!-- Dark mode logo (light text) -->
+<Image
+  src={logoDark}
+  alt="AgileTactix"
+  width={200}
+  height={50}
+  class="h-10 w-auto hidden dark:block"
+  loading="eager"
+/>
