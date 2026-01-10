@@ -18,7 +18,7 @@ export const headerData = {
   actions: [
     {
       text: 'Log In',
-      href: 'https://community.agiletactix.ai/',
+      href: 'https://community.agiletactix.ai/users/sign_in',
       variant: 'link'
     },
     {
