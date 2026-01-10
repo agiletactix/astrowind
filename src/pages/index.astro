@@ -2,18 +2,14 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AgileTactix — Transform from Theory-Chaser to AI-Powered Partner',
+  title: 'AgileTactix — From Theory-Chaser → AI-Powered Partner',
   ignoreTitleTemplate: true,
 };
 ---
@@ -25,23 +21,23 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get Free Blueprint Course',
+        text: 'Get the Agile-AI Blueprint',
         href: '/blueprint',
         icon: 'tabler:arrow-right',
       },
-      { text: 'See How It Works', href: '#story' },
+      { text: 'See What You\'ll Learn', href: '#learn' },
     ]}
   >
     <Fragment slot="title">
       <span class="block text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400 mb-4">
-        From Manual to Automated
+        FOR AGILE PROFESSIONALS
       </span>
       <span class="text-gray-500 dark:text-gray-400">From Theory-Chaser</span> →<br />
       <span class="text-accent dark:text-white highlight"> AI-Powered Partner</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Stop chasing certifications. Start mastering automation. Learn how agile professionals are using AI to 10x their impact (and income).
+      Learn real-world Jira automation and AI integration from an instructor who's trained 13,000+ professionals—now showing you what actually works in 2026.
     </Fragment>
   </Hero>
 
@@ -49,29 +45,30 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Students Trained', amount: '13,000+' },
-      { title: 'Agile Experience', amount: '15+ Years' },
-      { title: 'Current Consulting', amount: 'Fortune 500' },
+      { title: '13,000+ students trained', amount: '' },
+      { title: '15+ years experience', amount: '' },
     ]}
     classes={{ container: '-mt-8 md:-mt-12 pt-0 md:pt-0 pb-8 md:pb-12' }}
   />
 
-  <!-- Story Section ***************** -->
+  <!-- Problem Section ***************** -->
 
   <Content
-    id="story"
-    tagline="The Wake-Up Call"
-    title="Laid off from banking in 2023. Landed a Fortune 500 pharma contract 6 weeks later. The difference? Automation skills."
+    id="problem"
+    title="The Agile Industry Has a Problem"
   >
     <Fragment slot="content">
       <p class="text-lg text-muted mb-6">
-        After 15 years as an agile professional, I thought I was safe. Scrum Master, Product Owner, Release Train Engineer – I had the certifications and experience. But when the layoffs came, my resume looked like everyone else's.
+        You've felt this, haven't you? That nagging sense that your traditional agile certifications aren't enough anymore. Companies are quietly cutting "ceremony-only" agile roles while keeping the professionals who bring real technical value.
       </p>
       <p class="text-lg text-muted mb-6">
-        What saved me wasn't another certificate. It was showing hiring managers how I'd automated Jira workflows, built custom dashboards, and used AI to handle repetitive coordination work. While other candidates talked about "servant leadership," I showed working automation that saved 20 hours per sprint.
+        AI is fundamentally changing what it means to be a valuable agile professional. While you're still planning poker sessions and updating burndown charts manually, your more technical colleagues are automating workflows, integrating AI agents, and becoming indispensable business partners.
+      </p>
+      <p class="text-lg text-muted mb-6">
+        The generic frameworks you learned—SAFe, Scrum basics, traditional coaching techniques—don't teach AI integration. They don't show you how to leverage Jira automation or implement agentic AI in sprint planning. They're stuck in a pre-AI era that no longer exists.
       </p>
       <p class="text-lg text-muted font-semibold">
-        That's what Agile Tactix teaches you. Not theory. Tactical automation that makes you irreplaceable.
+        The gap between "agile coach" and "AI-powered agile architect" is growing every day. Which side of that gap do you want to be on?
       </p>
     </Fragment>
 
@@ -82,52 +79,192 @@ const metadata = {
 
   <!-- What You'll Master Features *** -->
 
-  <Features
-    id="features"
+  <Features2
+    id="learn"
     tagline="What You'll Master"
-    title="Real automation patterns used in enterprise agile teams"
-    subtitle="No fluff, no theory. Just working solutions you can implement Monday morning."
+    title="Real-World AI + Automation Mastery for Agile Professionals"
+    subtitle="Build the technical skills that make you indispensable—without becoming a developer"
     items={[
       {
-        title: 'Atlassian Automation',
-        description:
-          'Master Jira automation rules, Confluence macros, and Atlassian Rovo for AI-powered team coordination. Enterprise-proven patterns from Fortune 500 implementations.',
-        icon: 'tabler:bolt',
+        title: 'Jira Mastery',
+        description: '',
+        icon: 'tabler:chart-dots',
+        callToAction: {
+          text: '',
+          href: '',
+        },
+        items: [
+          { title: 'Advanced Jira automation and analytics' },
+          { title: 'From ticket-pusher to insights architect' },
+          { title: 'Real configurations you can use Monday morning' },
+        ],
       },
       {
-        title: 'AI-Powered Workflows',
-        description:
-          'Build custom AI assistants using Claude API, automate standup reports, sprint planning prep, and stakeholder communications. Work smarter, not harder.',
-        icon: 'tabler:bulb',
+        title: 'Agentic AI Integration',
+        description: '',
+        icon: 'tabler:robot',
+        callToAction: {
+          text: '',
+          href: '',
+        },
+        items: [
+          { title: 'How AI agents transform agile workflows' },
+          { title: 'Atlassian Rovo and AI-powered sprint planning' },
+          { title: 'Practical implementations, not theory' },
+        ],
       },
       {
-        title: 'Real-World Patterns',
-        description:
-          'Copy-paste automation patterns tested in production. Not hypothetical examples – actual workflows running in enterprise environments right now.',
-        icon: 'tabler:check',
+        title: 'Career Optionality',
+        description: '',
+        icon: 'tabler:trending-up',
+        callToAction: {
+          text: '',
+          href: '',
+        },
+        items: [
+          { title: 'Build skills companies actually need' },
+          { title: 'Transition from layoff-vulnerable to indispensable' },
+          { title: 'Create opportunities beyond your current role' },
+        ],
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Social Proof Stats ************* -->
+
+  <Stats
+    id="social-proof"
+    title="Proven Track Record: 13,000+ Students Trained"
+    subtitle="Real practitioner, not corporate trainer"
+    stats={[
+      { title: 'Professionals trained on Jira mastery (via Udemy)', amount: '13,000+' },
+      { title: 'Years hands-on experience in agile transformation', amount: '15+' },
+      { title: 'Currently employed full-time using these exact tools', amount: '100%' },
+    ]}
+  />
+
+  <!-- Testimonials Widget ************ -->
+
+  <Testimonials
+    title="What Our Students Say"
+    subtitle="(Note: These are placeholders - keep them marked as such)"
+    testimonials={[
+      {
+        testimonial: `Finally, someone teaching what actually works. The Jira automation examples alone saved me 10 hours a week.`,
+        name: '[Example Testimonial] Sarah K.',
+        job: 'Scrum Master — Note: Placeholder for future real testimonial',
+      },
+      {
+        testimonial: `I went from fearing layoffs to getting recruited by companies specifically for my Jira + AI skills. Game changer.`,
+        name: '[Example Testimonial] Michael T.',
+        job: 'Agile Coach — Note: Placeholder for future real testimonial',
+      },
+      {
+        testimonial: `The technical skills opened doors I didn't know existed. Now I'm the go-to person for AI integration in our org.`,
+        name: '[Example Testimonial] Jennifer L.',
+        job: 'Product Owner — Note: Placeholder for future real testimonial',
+      },
+    ]}
+  />
+
+  <!-- Comparison Section ************* -->
+
+  <Content
+    id="comparison"
+    title="Why AgileTactix Is Different"
+    isReversed
+    items={[
+      {
+        title: 'Other Training',
+        description: 'Generic theory from large organizations',
+        icon: 'tabler:x',
+      },
+      {
+        title: '',
+        description: 'Outdated frameworks (SAFe, Scrum basics)',
+        icon: 'tabler:x',
+      },
+      {
+        title: '',
+        description: 'Non-technical, ceremony-focused',
+        icon: 'tabler:x',
+      },
+      {
+        title: '',
+        description: 'Same content everyone else teaches',
+        icon: 'tabler:x',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-4">AgileTactix</h3>
+      <ul class="space-y-4">
+        <li class="flex items-start">
+          <svg class="w-6 h-6 text-green-600 dark:text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-lg text-muted">Real-world tactical examples</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-6 h-6 text-green-600 dark:text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-lg text-muted">AI-first, automation-driven approaches</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-6 h-6 text-green-600 dark:text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-lg text-muted">Technical skills that create value</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-6 h-6 text-green-600 dark:text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="text-lg text-muted">What's working NOW in 2026</span>
+        </li>
+      </ul>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Final CTA Widget *************** -->
 
   <CallToAction
+    id="final-cta"
     actions={[
       {
         variant: 'primary',
-        text: 'Get Your Free Blueprint Now',
+        text: 'Get Your Free Blueprint',
         href: '/blueprint',
-        icon: 'tabler:arrow-right',
+        icon: 'tabler:download',
       },
     ]}
   >
     <Fragment slot="title">
-      Ready to Become Irreplaceable?
+      Start Your Transformation Today
     </Fragment>
 
     <Fragment slot="subtitle">
-      Start with the free AI-Powered Agile Blueprint. 3 lessons that show you exactly how to automate your first workflow.<br class="hidden md:inline" />
-      <span class="text-sm text-muted mt-2 block">No credit card required. Join the community in 60 seconds.</span>
+      <span class="text-2xl font-bold mb-4 block">Get the Agile-AI Blueprint</span>
+      <p class="text-lg mb-6">
+        Discover what it takes to provide real agile value in today's AI-driven world. This mindset is critical to delivering agile solutions without manual overhead.
+      </p>
+      <ul class="text-left max-w-2xl mx-auto space-y-2 mb-8">
+        <li>✓ How AI changes the agile professional's role</li>
+        <li>✓ Technical skills that make you indispensable</li>
+        <li>✓ Career paths beyond traditional coaching</li>
+        <li>✓ Actionable steps to start this week</li>
+      </ul>
+
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h3 class="text-xl font-bold mb-3">Join the AgileTactix Community</h3>
+        <p class="text-base mb-4">
+          Get access to exclusive training, live workshops, and a community of AI-forward agile professionals
+        </p>
+        <p class="text-sm text-muted mb-4">Community launching soon</p>
+        <a
+          href="/community"
+          class="inline-block px-6 py-3 bg-secondary text-white rounded-lg hover:bg-opacity-90 transition-all"
+        >
+          Explore Community
+        </a>
+      </div>
     </Fragment>
   </CallToAction>
 </Layout>
