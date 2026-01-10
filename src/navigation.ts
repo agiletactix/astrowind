@@ -32,19 +32,7 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    {
-      title: 'Product',
-      links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
-      ],
-    },
-    {
+   
       title: 'Platform',
       links: [
         { text: 'Developer API', href: '#' },
@@ -71,7 +59,6 @@ export const footerData = {
         { text: 'Blog', href: '#' },
         { text: 'Careers', href: '#' },
         { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
         { text: 'Social Impact', href: '#' },
         { text: 'Shop', href: '#' },
       ],
@@ -88,7 +75,7 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
-  footNote: `
+  /* footNote: `
     Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
-  `,
+  `, */
 };
