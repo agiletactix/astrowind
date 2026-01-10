@@ -1,27 +1,8 @@
 ---
-import { Image } from 'astro:assets';
-// @ts-ignore
-import logoLight from '~/assets/images/agiletactix-logo-light.png';
-// @ts-ignore
-import logoDark from '~/assets/images/agiletactix-logo-dark.png';
+// Logo component - using text until image files are added
+// TODO: Replace with image logos once agiletactix-logo-light.png and agiletactix-logo-dark.png are added
 ---
 
-<!-- Light mode logo (dark text) -->
-<Image
-  src={logoLight}
-  alt="AgileTactix"
-  width={200}
-  height={50}
-  class="h-10 w-auto dark:hidden"
-  loading="eager"
-/>
-
-<!-- Dark mode logo (light text) -->
-<Image
-  src={logoDark}
-  alt="AgileTactix"
-  width={200}
-  height={50}
-  class="h-10 w-auto hidden dark:block"
-  loading="eager"
-/>
+<span class="self-center text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+  AGILETACTIX
+</span>
