@@ -1,7 +1,7 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
-  base: '/'
+  name: AgileTactix
+  site: 'https://agiletactix.github.io'
+  base: '/astrowind'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: AgileTactix
+    template: '%s — AgileTactix'
+  description: "Learn real-world Jira automation and AI integration from an instructor who's trained 13,000+ professionals—now showing you what actually works in 2026."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: AgileTactix
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@agiletactix'
+    site: '@agiletactix'
     cardType: summary_large_image
 
 i18n:
