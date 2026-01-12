@@ -14,6 +14,10 @@ const {
   description: descriptionClass = '',
   icon: defaultIconClass = 'text-primary',
 } = classes;
+
+// Icon background colors for each card
+const iconBackgrounds = ['bg-blue-100', 'bg-purple-100', 'bg-yellow-100'];
+const checkmarkColors = ['text-blue-600', 'text-purple-600', 'text-orange-600'];
 ---
 
 {
@@ -32,7 +36,7 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, icon, callToAction, items: nestedItems, classes: itemClasses = {} }, index) => (
         <div
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
@@ -41,11 +45,25 @@ const {
           )}
         >
           {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+            <div class={twMerge('w-12 h-12 rounded-lg flex items-center justify-center mb-6', iconBackgrounds[index % iconBackgrounds.length])}>
+              <Icon name={icon || defaultIcon} class={twMerge('w-6 h-6', defaultIconClass, itemClasses?.icon)} />
+            </div>
           )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+          <div class={twMerge('text-2xl font-bold mb-6', titleClass, itemClasses?.title)}>{title}</div>
           {description && (
             <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+          )}
+          {nestedItems && nestedItems.length > 0 && (
+            <ul class="space-y-4">
+              {nestedItems.map((item) => (
+                <li class="flex items-start gap-3">
+                  <div class={twMerge('w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5', checkmarkColors[index % checkmarkColors.length].replace('text-', 'bg-'))}>
+                    <Icon name="tabler:check" class={twMerge('w-4 h-4 text-white')} />
+                  </div>
+                  <span class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">{item.title}</span>
+                </li>
+              ))}
+            </ul>
           )}
           {callToAction && (
             <div class="mt-2">
