@@ -1,0 +1,296 @@
+---
+/**
+ * CONFIGURATION REQUIRED:
+ *
+ * 1. YouTube Video ID (line ~42):
+ *    Replace "YOUR_VIDEO_ID" with your actual YouTube video ID
+ *    Example: If your video URL is https://www.youtube.com/watch?v=ABC123xyz
+ *    Use: ABC123xyz
+ *
+ * 2. Kit.com Form ID (line ~227):
+ *    Replace both instances of "YOUR_KIT_FORM_ID" with your Kit.com form ID
+ *    Find this in your Kit.com account under Forms > Embed Code
+ *
+ * 3. Before/After Image (line ~178):
+ *    Replace the placeholder with your actual comparison image
+ */
+
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Blueprint - AgileTactix',
+  ignoreTitleTemplate: true,
+};
+
+// CONFIGURATION - Update these values
+const YOUTUBE_VIDEO_ID = 'YOUR_VIDEO_ID'; // Replace with your YouTube video ID
+const KIT_FORM_ID = 'YOUR_KIT_FORM_ID';   // Replace with your Kit.com form ID
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-blue-950 to-blue-900 py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
+        <!-- Left Column - Text -->
+        <div class="text-left">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            How I Built a Technical Edge That Made Me <span class="text-cyan-400">Irreplaceable</span> in an AI-Driven Market.
+          </h1>
+          <p class="text-lg md:text-xl text-gray-300 mb-4">
+            Stop being a Jira secretary. I built a Jira-driven engine that automates the noise so you can focus on <span class="font-semibold text-white">Technical Leadership.</span>
+          </p>
+          <p class="text-lg md:text-xl text-gray-300 mb-8">
+            This <span class="text-cyan-400 font-semibold">free Agile-AI blueprint</span> is my exact system for 2026.
+          </p>
+          <button
+            id="heroCtaBtn"
+            class="inline-block bg-cyan-400 hover:bg-cyan-500 text-gray-900 font-bold text-lg px-8 py-4 rounded-full transition-colors duration-200"
+          >
+            Get the Blueprint
+          </button>
+        </div>
+
+        <!-- Right Column - Video -->
+        <div class="relative">
+          <div class="relative rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              class="w-full aspect-video"
+              src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`}
+              title="The Skills That Saved My Agile Career"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1 - Message Importance -->
+  <section class="relative bg-gray-900 py-20 md:py-28 overflow-hidden">
+    <!-- Grid Background Pattern -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute inset-0" style="background-image: linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-5xl px-4 sm:px-6 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+        Your Technical Skills Are Too Important to Be Limited by Manual Process.
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto">
+        Whether you face automation threats, burnout, or simply the physical limits of a 40-hour week, the system is the same. This guide is your first step to building a career that can scale beyond manual effort.
+      </p>
+      <button
+        id="section1CtaBtn"
+        class="inline-block bg-cyan-400 hover:bg-cyan-500 text-gray-900 font-bold text-lg px-8 py-4 rounded-full transition-colors duration-200"
+      >
+        Send Me The Blueprint
+      </button>
+    </div>
+  </section>
+
+  <!-- Section 2 - Blueprint Contents -->
+  <section class="relative bg-gradient-to-br from-emerald-400 to-cyan-400 py-20 md:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Get My Automation-First Blueprint.
+        </h2>
+        <p class="text-xl md:text-2xl text-gray-900 mb-10">
+          This 38-page guide gives you the exact frameworks I built when my back was against the wall. Inside, you'll get:
+        </p>
+        <button
+          id="section2CtaBtn"
+          class="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold text-lg px-8 py-4 rounded-full transition-colors duration-200 mb-12"
+        >
+          I Need This Blueprint
+        </button>
+      </div>
+
+      <!-- Feature Cards Grid -->
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-4">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-4">
+            <Icon name="tabler:sparkles" class="w-10 h-10 text-gray-900" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            The 15-Minute Sprint Planning System
+          </h3>
+          <p class="text-gray-700 text-lg">
+            My secret process for automating sprint planning and story estimation in the time it takes to grab coffee.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-4">
+            <Icon name="tabler:brain" class="w-10 h-10 text-gray-900" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            The 'Jira to Action' Protocol
+          </h3>
+          <p class="text-gray-700 text-lg">
+            How to turn your messy Jira backlog into clear, prioritized technical roadmaps using AI-powered analysis.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-4">
+            <Icon name="tabler:lock" class="w-10 h-10 text-gray-900" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            My Automation Architecture Secrets
+          </h3>
+          <p class="text-gray-700 text-lg">
+            The exact 6-step process I use—with the specific tools—to build a hyper-efficient workflow that runs 24/7.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg md:col-span-2 lg:col-span-2">
+          <div class="mb-4">
+            <Icon name="tabler:layout-grid" class="w-10 h-10 text-gray-900" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            The Process Multiplication Framework
+          </h3>
+          <p class="text-gray-700 text-lg">
+            The system for turning one well-documented process into 10+ automated workflows across your entire tech stack.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="mb-4">
+            <Icon name="tabler:calendar" class="w-10 h-10 text-gray-900" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            The 30-Day Transformation Plan
+          </h3>
+          <p class="text-gray-700 text-lg">
+            A week-by-week implementation roadmap to take you from overwhelmed engineer to a fully operational AI-powered leader.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 - AI Never Gets Tired -->
+  <section class="relative bg-gray-900 py-20 md:py-28">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+        My Automation Never Gets Tired.<br />
+        It Never Has an Off Day.<br />
+        <span class="text-cyan-400">It Just Delivers.</span>
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+        While I focused on architecture and strategy, my automation system was handling the repetitive work—creating the most consistent, high-quality output of my career. I quickly realized this was more than a crisis solution—it was a new paradigm for all technical leaders. This is about separating your results from your effort.
+      </p>
+
+      <!-- Comparison Image Placeholder -->
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-2xl aspect-video flex items-center justify-center">
+          <p class="text-gray-500 text-lg">Before/After Comparison Visual</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 - Final CTA with Form -->
+  <section class="relative bg-gradient-to-br from-teal-900 to-teal-800 py-20 md:py-28">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+        Get the 38-Page Blueprint
+      </h2>
+      <p class="text-xl md:text-2xl text-white mb-8">
+        The Technical Leader's AI Blueprint: From 90 Hours to 5 Minutes
+      </p>
+
+      <!-- CTA Button to Open Modal -->
+      <button
+        id="finalCtaBtn"
+        class="inline-block bg-cyan-400 hover:bg-cyan-500 text-gray-900 font-bold text-lg px-12 py-5 rounded-full transition-colors duration-200 mb-8"
+      >
+        Download The Blueprint
+      </button>
+
+      <p class="text-lg text-teal-200">
+        I've helped technical leaders slash 90-hour workweeks down to 30 minutes using proven AI frameworks. Get my free 38-page blueprint and learn the exact system.
+      </p>
+    </div>
+  </section>
+
+  <!-- Modal for Kit.com Form -->
+  <div id="blueprintModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+      <button
+        id="closeModal"
+        class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-3xl font-bold z-10"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+      <div class="p-8">
+        <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Get Your Free Blueprint</h3>
+        <p class="text-gray-600 text-center mb-6">Enter your email to receive the 38-page AI automation guide.</p>
+
+        <!-- Kit.com Form Embed -->
+        <div class="kit-form-embed">
+          <script async data-uid={KIT_FORM_ID} src={`https://agiletactix.kit.com/${KIT_FORM_ID}/index.js`}></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Script -->
+  <script>
+    // Get all CTA buttons and modal elements
+    const modal = document.getElementById('blueprintModal');
+    const ctaButtons = [
+      document.getElementById('heroCtaBtn'),
+      document.getElementById('section1CtaBtn'),
+      document.getElementById('section2CtaBtn'),
+      document.getElementById('finalCtaBtn')
+    ];
+    const closeBtn = document.getElementById('closeModal');
+
+    // Open modal when any CTA button is clicked
+    ctaButtons.forEach(btn => {
+      btn?.addEventListener('click', () => {
+        modal?.classList.remove('hidden');
+        modal?.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close modal when close button is clicked
+    closeBtn?.addEventListener('click', () => {
+      modal?.classList.add('hidden');
+      modal?.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    });
+
+    // Close modal when clicking outside the content
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
+</Layout>
