@@ -7,6 +7,9 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+import heroBg from '~/assets/images/hero-image-branded.png';
 
 const metadata = {
   title: 'AgileTactix — From Theory-Chaser → AI-Powered Partner',
@@ -39,6 +42,20 @@ const metadata = {
 
     <Fragment slot="subtitle">
       Learn real-world Jira automation and AI integration from an instructor who's trained 13,000+ professionals—now showing you what actually works in 2026.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 overflow-hidden">
+        <Image
+          src={heroBg}
+          alt="Hero Background"
+          class="absolute inset-0 w-full h-full object-cover opacity-40 dark:opacity-30"
+          loading="eager"
+          width={1920}
+          height={1080}
+        />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-50/90 via-white/80 to-white dark:from-gray-900/90 dark:via-gray-900/80 dark:to-gray-900"></div>
     </Fragment>
   </Hero>
 
